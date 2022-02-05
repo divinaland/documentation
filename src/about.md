@@ -1,5 +1,6 @@
 ---
 title: About
+meta_title: About | Divina
 ---
 
 ## Authors
