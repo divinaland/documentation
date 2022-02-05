@@ -11,3 +11,5 @@ title = "Divina"
 
 # Site tagline.
 tagline = "🎀 A modern build system for assembly"
+
+version = "Version 0.1.0"
