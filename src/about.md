@@ -8,7 +8,13 @@ title: About
 
 ## Acknowledgements
 
-This website was built using [Ivy](https://github.com/dmulholl/ivy).
+- This website was built using [Ivy](https://github.com/dmulholl/ivy).
+
+### Divina Pink Ribbon Bow Emoji
+
+- Copyright 2020 Twitter, Inc and other contributors
+- Code licensed under the MIT License: <http://opensource.org/licenses/MIT>
+- Graphics licensed under CC-BY 4.0: <https://creativecommons.org/licenses/by/4.0/>
 
 ## License
 
