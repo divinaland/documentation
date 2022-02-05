@@ -1,6 +1,6 @@
 ---
-title: About
-meta_title: About | Divina
+title: About &mdash; Divina
+meta_title: About &mdash; Divina
 ---
 
 ## Authors

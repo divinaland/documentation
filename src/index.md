@@ -1,6 +1,6 @@
 ---
-title: Divina
-meta_title: Home | Divina
+title: Home &mdash; Divina
+meta_title: Home &mdash; Divina
 meta_description: 🎀 A modern build system for assembly
 subtitle: 🎀 A modern build system for assembly
 ---
