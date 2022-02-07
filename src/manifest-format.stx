@@ -1,0 +1,67 @@
+---
+title: Manifest Format &mdash; Divina
+meta_title: Manifest Format &mdash; Divina
+---
+
+## Rules
+
+- All Divina manifests must be named `Divina.lua`
+- Package manifests should be in a subdirectory
+- A workspace manifest can only source package manifests
+
+## Divina Exposed Globals
+
+::: code lua
+
+  --- @class Divina
+  --- @field public version string Installed Divina version
+  --- @field public Type table<string, number> Package type
+  --- @field public Arch table<string, number> Architecture to compile for
+  Divina = {
+    version,
+    Type = {
+      Bin = 1,
+      Lib = 2,
+    },
+    Arch = {
+      x86 = 1,
+      x64 = 2,
+    },
+  }
+
+  --- @return void
+  function test() end
+
+## Workspace Manifest Format
+
+::: code lua
+
+  --- @class Workspace
+  --- @field public members string[]
+  Workspace = {
+    members,
+  }
+
+## Package Manifest Format
+
+::: code lua
+
+  --- @class Package
+  --- @field public name string
+  --- @field public version string
+  --- @field public description string
+  --- @field public compile_options string[]
+  --- @field public minimum_divina_version string
+  --- @field public sources string[]
+  --- @field public compiler string
+  Package = {
+    name,
+    version,
+    description,
+    compile_options,
+    minimum_divina_version,
+    sources,
+    type,
+    arch,
+    compiler,
+  }

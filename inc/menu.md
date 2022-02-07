@@ -1,3 +1,5 @@
 * [Home](@root/)
+* [Manifest Format](@root/manifest-format//)
+    * [Examples](@root/manifest-format/examples//)
 * [About](@root/about//)
 * [GitHub](https://github.com/divinaland/Divina)
