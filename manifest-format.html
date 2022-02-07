@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Manifest Format &mdash; Divina</title>
+        <link rel="stylesheet" href="assets/fonts.css">
+        <link rel="stylesheet" href="assets/graphite.css">
+        <link rel="stylesheet" href="assets/pygments.css">
+        
+        
+    </head>
+    <body class="node-manifest-format node">
+        <header class="masthead">
+            <h1><a href="index.html">Divina</a></h1>
+            
+                <p class="tagline">🎀 A modern build system for assembly</p>
+            
+            
+                <p class="version">Version 0.1.0</p>
+            
+            <nav class="menu">
+                <input id="menu-check" type="checkbox"/>
+                <label id="menu-label" for="menu-check" class="unselectable">
+                    <span class="icon close-icon">✕</span>
+                    <span class="icon open-icon">☰</span>
+                    <span class="text">Menu</span>
+                </label>
+                <ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="manifest-format.html">Manifest Format</a><ul>
+<li><a href="manifest-format/examples.html">Examples</a></li>
+</ul>
+</li>
+<li><a href="about.html">About</a></li>
+<li><a href="https://github.com/divinaland/Divina">GitHub</a></li>
+</ul>
+            </nav>
+        </header>
+        <article class="main">
+            <header class="title">
+                <h1>Manifest Format &mdash; Divina</h1>
+                
+                <hr>
+            </header>
+            <h2 id="rules">
+Rules
+</h2>
+<ul>
+<li>
+All Divina manifests must be named <code>Divina.lua</code>
+</li>
+<li>
+Package manifests should be in a subdirectory
+</li>
+<li>
+A workspace manifest can only source package manifests
+</li>
+</ul>
+<h2 id="divina-exposed-globals">
+Divina Exposed Globals
+</h2>
+<pre class="lang-lua pygments" data-lang="lua">
+<span class="c1">--- @class Divina</span>
+<span class="c1">--- @field public version string Installed Divina version</span>
+<span class="c1">--- @field public Type table&lt;string, number&gt; Package type</span>
+<span class="c1">--- @field public Arch table&lt;string, number&gt; Architecture to compile for</span>
+<span class="n">Divina</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">version</span><span class="p">,</span>
+  <span class="n">Type</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">Bin</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">Lib</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="n">Arch</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">x86</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">x64</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">--- @return void</span>
+<span class="kr">function</span> <span class="nf">test</span><span class="p">()</span> <span class="kr">end</span>
+</pre>
+<h2 id="workspace-manifest-format">
+Workspace Manifest Format
+</h2>
+<pre class="lang-lua pygments" data-lang="lua">
+<span class="c1">--- @class Workspace</span>
+<span class="c1">--- @field public members string[]</span>
+<span class="n">Workspace</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">members</span><span class="p">,</span>
+<span class="p">}</span>
+</pre>
+<h2 id="package-manifest-format">
+Package Manifest Format
+</h2>
+<pre class="lang-lua pygments" data-lang="lua">
+<span class="c1">--- @class Package</span>
+<span class="c1">--- @field public name string</span>
+<span class="c1">--- @field public version string</span>
+<span class="c1">--- @field public description string</span>
+<span class="c1">--- @field public compile_options string[]</span>
+<span class="c1">--- @field public minimum_divina_version string</span>
+<span class="c1">--- @field public sources string[]</span>
+<span class="c1">--- @field public compiler string</span>
+<span class="n">Package</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">name</span><span class="p">,</span>
+  <span class="n">version</span><span class="p">,</span>
+  <span class="n">description</span><span class="p">,</span>
+  <span class="n">compile_options</span><span class="p">,</span>
+  <span class="n">minimum_divina_version</span><span class="p">,</span>
+  <span class="n">sources</span><span class="p">,</span>
+  <span class="nb">type</span><span class="p">,</span>
+  <span class="n">arch</span><span class="p">,</span>
+  <span class="n">compiler</span><span class="p">,</span>
+<span class="p">}</span>
+</pre>
+        </article>
+        
+    </body>
+</html>
